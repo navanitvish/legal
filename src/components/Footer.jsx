@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const footerLinks = [
   {
@@ -55,16 +56,21 @@ function Footer() {
 
           {/* Social Media Icons */}
           <div className="flex gap-4">
-            {['LinkedIn', 'Twitter', 'Facebook', 'Instagram', 'YouTube'].map((platform, index) => (
-              <a key={index} href={`#${platform.toLowerCase()}`} aria-label={`Visit our ${platform} page`}>
-                <img
-                  loading="lazy"
-                  src={`http://b.io/ext_${35 + index}-`} 
-                  alt={platform} 
-                  className="w-6 h-6 object-contain"
-                />
-              </a>
-            ))}
+            <a href="https://www.linkedin.com" aria-label="Visit our LinkedIn page">
+              <FaLinkedin className="w-6 h-6 text-gray-600 hover:text-blue-500 transition-colors" />
+            </a>
+            <a href="https://www.twitter.com" aria-label="Visit our Twitter page">
+              <FaTwitter className="w-6 h-6 text-gray-600 hover:text-blue-500 transition-colors" />
+            </a>
+            <a href="https://www.facebook.com" aria-label="Visit our Facebook page">
+              <FaFacebook className="w-6 h-6 text-gray-600 hover:text-blue-500 transition-colors" />
+            </a>
+            <a href="https://www.instagram.com" aria-label="Visit our Instagram page">
+              <FaInstagram className="w-6 h-6 text-gray-600 hover:text-red-500 transition-colors" />
+            </a>
+            <a href="https://www.youtube.com" aria-label="Visit our YouTube page">
+              <FaYoutube className="w-6 h-6 text-gray-600 hover:text-red-500 transition-colors" />
+            </a>
           </div>
         </div>
       </div>
